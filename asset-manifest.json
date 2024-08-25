@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/jorge-portfolio/static/css/main.e419046c.css",
-    "main.js": "/jorge-portfolio/static/js/main.6495d238.js",
+    "main.js": "/jorge-portfolio/static/js/main.e675c1c1.js",
     "static/media/cohete.png": "/jorge-portfolio/static/media/cohete.105dbb5fbdfb76f3268c.png",
     "index.html": "/jorge-portfolio/index.html",
     "main.e419046c.css.map": "/jorge-portfolio/static/css/main.e419046c.css.map",
-    "main.6495d238.js.map": "/jorge-portfolio/static/js/main.6495d238.js.map"
+    "main.e675c1c1.js.map": "/jorge-portfolio/static/js/main.e675c1c1.js.map"
   },
   "entrypoints": [
     "static/css/main.e419046c.css",
-    "static/js/main.6495d238.js"
+    "static/js/main.e675c1c1.js"
   ]
 }
