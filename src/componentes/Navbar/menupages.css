@@ -1,0 +1,28 @@
+ul.menu {
+    display: flex;
+    flex-direction: column; /* Para alinear los elementos verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    color: black;
+    font-family: Montserrat, Helvetica;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0; /* Fijar al principio de la pantalla */
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    padding: 0;
+}
+
+.nav-links-menu {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+li {
+    margin-top: 5px;
+    list-style: none;
+    text-align: center;
+    padding: 0%;
+}
