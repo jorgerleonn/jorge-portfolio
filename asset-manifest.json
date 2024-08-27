@@ -1,15 +1,14 @@
 {
   "files": {
-    "main.css": "/jorge-portfolio/static/css/main.7d6304d1.css",
-    "main.js": "/jorge-portfolio/static/js/main.1d824433.js",
-    "static/media/Montserrat-Regular.ttf": "/jorge-portfolio/static/media/Montserrat-Regular.2a2d37bf7680d86811db.ttf",
+    "main.css": "/jorge-portfolio/static/css/main.000df9e3.css",
+    "main.js": "/jorge-portfolio/static/js/main.e2c07d41.js",
     "static/media/cohete.png": "/jorge-portfolio/static/media/cohete.105dbb5fbdfb76f3268c.png",
     "index.html": "/jorge-portfolio/index.html",
-    "main.7d6304d1.css.map": "/jorge-portfolio/static/css/main.7d6304d1.css.map",
-    "main.1d824433.js.map": "/jorge-portfolio/static/js/main.1d824433.js.map"
+    "main.000df9e3.css.map": "/jorge-portfolio/static/css/main.000df9e3.css.map",
+    "main.e2c07d41.js.map": "/jorge-portfolio/static/js/main.e2c07d41.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d6304d1.css",
-    "static/js/main.1d824433.js"
+    "static/css/main.000df9e3.css",
+    "static/js/main.e2c07d41.js"
   ]
 }
