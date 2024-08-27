@@ -15,14 +15,14 @@ function NavBar() {
   return (
     <nav className='navbar'>
       <div className="nav-container-logo">
-        <NavLink to="/portfolio">
+        <NavLink to="/jorge-portfolio">
           <img className="nav-logo" src={require('./cohete.png')} alt='logo'></img>
         </NavLink>
       </div>
 
       <div>
         <ul>
-          <li className='nav-item'><NavLink activeClassname="active" className="nav-links" onClick={toggleMenu} to="/portfolio">Home</NavLink></li>
+          <li className='nav-item'><NavLink activeClassname="active" className="nav-links" onClick={toggleMenu} to="/jorge-portfolio">Home</NavLink></li>
           <li className='nav-item'><NavLink activeClassname="active" className="nav-links" onClick={toggleMenu} to="/skills">Skills</NavLink></li>
           <li className='nav-item'><NavLink activeClassname="active" className="nav-links" onClick={toggleMenu} to="/contact">Contact</NavLink></li>
           <li className='nav-item'><NavLink activeClassname="active" className="nav-links" onClick={toggleMenu} to="/projects">Projects</NavLink></li>

@@ -1,0 +1,35 @@
+.home-section{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+#home-texto {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    text-align: left;
+    margin-left: 10vw;
+    line-height: 1.3;
+}
+
+#h1-nombre {
+    font-size: clamp(20px, 3vw, 30px);
+    font-weight: 300;
+    margin: 0;
+}
+
+#h1-leon {
+    font-weight: 700;
+    font-size: clamp(45px, 8vw, 90px);
+    margin: 0;
+}
+
+.home-section p {
+    font-size: clamp(10px, 2vw, 18px);
+    width: fit-content;
+    margin: 0;
+}

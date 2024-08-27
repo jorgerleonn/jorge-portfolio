@@ -12,7 +12,7 @@ export default function Menupages() {
     return (
 
     <ul className='menu'>
-        <li><NavLink activeClassname="active" className="nav-links-menu" onClick={toggleMenu} to="/portfolio">Home</NavLink></li>
+        <li><NavLink activeClassname="active" className="nav-links-menu" onClick={toggleMenu} to="/jorge-portfolio">Home</NavLink></li>
         <li><NavLink activeClassname="active" className="nav-links-menu" onClick={toggleMenu} to="/skills">Skills</NavLink></li>
         <li><NavLink activeClassname="active" className="nav-links-menu" onClick={toggleMenu} to="/contact">Contact</NavLink></li>
         <li><NavLink activeClassname="active" className="nav-links-menu" onClick={toggleMenu} to="/projects">Projects</NavLink></li>
