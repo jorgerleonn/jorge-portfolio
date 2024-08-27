@@ -13,7 +13,13 @@ code {
     monospace;
 }
 
-h1{
+/* @font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Regular.ttf') format('ttf');
+  font-style: normal;
+} */
+
+h1 {
   color: white;
 }
 

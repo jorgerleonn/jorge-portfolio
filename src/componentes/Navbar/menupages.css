@@ -13,12 +13,19 @@ ul.menu {
     height: 100vh; /* Ocupa toda la altura de la pantalla */
     padding: 0;
     z-index: 1000;
+    margin: 0;
 }
 
 .nav-links-menu {
-    color: white;
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, Helvetica;
+    font-size: 25px;
     text-decoration: none;
-    text-align: center;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: color 0.4s;
 }
 
 li {
