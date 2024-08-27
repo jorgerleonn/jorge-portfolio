@@ -132,7 +132,7 @@ ul {
 @media screen and (max-width: 448px) {
 
   .navbar-span {
-    display: none;
+    font-size: 8px;
   }
 
 }
