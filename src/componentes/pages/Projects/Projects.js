@@ -1,8 +1,8 @@
 import React from 'react'
 import './projects.css'
-import TarjetaFlutter from '../../TarjetaFlutter/TarjetaFlutter.js'
-import TarjetaPython from '../../TarjetaPython/TarjetaPython.js'
-import TarjetaReact from '../../TarjetaReact/TarjetaReact.js'
+import TarjetaFlutter from './TarjetaFlutter/TarjetaFlutter.js'
+import TarjetaPython from './TarjetaPython/TarjetaPython.js'
+import TarjetaReact from './TarjetaReact/TarjetaReact.js'
 
 const Projects = () => {
 
