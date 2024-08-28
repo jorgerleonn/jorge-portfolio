@@ -1,8 +1,9 @@
-.tarjeta {
+.tarjeta-react {
     position: relative;
     background-color: rgb(0, 0, 0);
-    width: 300px;
-    height: 400px;
+    width: 200px;
+    height: 250px;
+    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
@@ -31,7 +32,7 @@
     }
 }
 
-.tarjeta::before {
+.tarjeta-react::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -43,22 +44,21 @@
     border-radius: 20px;
 }
 
-.tarjeta::after {
+.tarjeta-react::after {
     content: '';
     position: absolute;
     inset: 2px;
-    background: url('Foto_jorge_1.jpg');
+    background-image: url('./react_type_shit.jpg');
     background-size: cover;
     border-radius: 20px;
     overflow: hidden;
+
 }
-
-
 
 
 @media screen and (max-width: 600px) {
 
-    .tarjeta {
+    .tarjeta-react {
         position: relative;
         background-color: rgb(0, 0, 0);
         width: 150px;
@@ -67,14 +67,13 @@
         align-items: center;
         border-radius: 25px;
         box-shadow: 0 20px 20px 0 #000000bb;
-        overflow: hidden; /* esto recorta la imagen dentro del contenedor */
+        overflow: hidden; 
     }
     
-    .div-tarjeta-1 {
+    .div-tarjeta-react-1 {
         display: flex;
-        justify-content: left;
+        justify-content: center;
         margin: 80px 20px 20px 40px;
-        position: fixed;
 
     }
 

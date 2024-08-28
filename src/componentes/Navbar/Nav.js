@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
 import {HamburgerClose, HamburgerShow} from './Icons.js'
@@ -12,8 +12,25 @@ function NavBar() {
     setShowMenu(!showMenu)
   };
 
+  const [isSolid, setIsSolid] = useState(false);
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 25) {
+      setIsSolid(true); // Se vuelve sólida después de un desplazamiento de 50px
+    } else {
+      setIsSolid(false); // Mantiene transparente cuando está en la parte superior
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className='navbar'>
+    <nav className={`navbar ${isSolid ? 'solid' : ''}`}>
       <div className="nav-container-logo">
         <NavLink to="/jorge-portfolio">
           <img className="nav-logo" src={require('./cohete.png')} alt='Logo'></img>

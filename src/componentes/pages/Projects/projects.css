@@ -1,19 +1,57 @@
-.projects-section {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0px;
-    padding: 0px;
-
+/* Fondo general de la página */
+body {
+    background: linear-gradient(#000, #003e8f); /* Cambia esto según lo que necesites */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Helvetica, sans-serif; /* Asegura que toda la página use la misma fuente */
+    color: white;
 }
 
+/* Estilos para la primera sección */
+.projects-section {
+    width: 100%;
+    display: block;
+    height: 100vh;
+    justify-content: center;
+    align-items: top; /* Centra verticalmente el contenido */
+    margin: 0;
+    padding-top: 80px;
+}
 
+/* Estilos para el texto dentro de la primera sección */
 #projects-texto {
-    font-family: 'Montserrat', Helvetica, sans-serif;
-    text-align: left;
-    margin-left: 10vw;
+    text-align: center;
     line-height: 1.2;
 }
+
+/* Estilos para la segunda sección */
+.repos-grid {
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dos columnas con un mínimo de 300px cada una */
+    gap: 10px;
+    margin: 0 auto;
+    padding-top: 80px;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    .repos-grid {
+        display: grid;
+        width: 80%;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Dos columnas con un mínimo de 300px cada una */
+        gap: 10px;
+        margin: 0 auto;
+        padding-top: 40px;
+        justify-content: center;
+    }
+
+}
+
+
+

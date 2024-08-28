@@ -1,0 +1,80 @@
+.tarjeta-python {
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    width: 200px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 20px 20px 0 #000000bb;
+    overflow: hidden;
+    background: repeating-conic-gradient(from var(--a),#0f8c8c 0%, #0f8c8c 5%, 
+                                        transparent 5%, transparent 40%, #0f8c8c 50%);
+    animation: animate 8s linear infinite;
+}
+
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes animate {
+    0%
+    {
+        --a: 0deg
+    }
+
+    100%
+    {
+        --a: 360deg
+    }
+}
+
+.tarjeta-python::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--a),#ffffff 0%, #ffffff 5%, 
+    transparent 5%, transparent 40%, #ffffff 50%);
+    animation: animate 8s linear infinite;
+    animation-delay: -1.5s;
+    border-radius: 20px;
+}
+
+.tarjeta-python::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background-image: url('./python_type_shit.jpg');
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .tarjeta-python {
+        position: relative;
+        background-color: rgb(0, 0, 0);
+        width: 150px;
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        box-shadow: 0 20px 20px 0 #000000bb;
+        overflow: hidden; 
+    }
+    
+    .div-tarjeta-python-1 {
+        display: flex;
+        justify-content: center;
+        margin: 80px 20px 20px 40px;
+
+    }
+
+}

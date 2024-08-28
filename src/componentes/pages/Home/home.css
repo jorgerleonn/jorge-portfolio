@@ -1,4 +1,8 @@
 .home-section{
+    background: url('./escritorio.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: fixed;
     width: 100%;
     height: 100%;
