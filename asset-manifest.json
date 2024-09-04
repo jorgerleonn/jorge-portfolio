@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/jorge-portfolio/static/css/main.5c3e3c52.css",
+    "main.css": "/jorge-portfolio/static/css/main.17cdf5fe.css",
     "main.js": "/jorge-portfolio/static/js/main.a4543d63.js",
+    "static/media/react_type_shit-2.jpg": "/jorge-portfolio/static/media/react_type_shit-2.a2bddc2c925787c01884.jpg",
+    "static/media/flutter-2.jpg": "/jorge-portfolio/static/media/flutter-2.7ecbd529a92ae77f9746.jpg",
+    "static/media/python_type_shit-2.jpg": "/jorge-portfolio/static/media/python_type_shit-2.71e40cfdcfcc740691bf.jpg",
     "static/media/escritorio.png": "/jorge-portfolio/static/media/escritorio.0f0f89b3cbc985cb0c83.png",
-    "static/media/react_type_shit.jpg": "/jorge-portfolio/static/media/react_type_shit.5dd2f6f93b5fc4fa8da2.jpg",
-    "static/media/flutter.jpg": "/jorge-portfolio/static/media/flutter.4c0da9d1654804bce6ec.jpg",
-    "static/media/python_type_shit.jpg": "/jorge-portfolio/static/media/python_type_shit.f572d443c539d6f33bbb.jpg",
     "static/media/cohete.png": "/jorge-portfolio/static/media/cohete.105dbb5fbdfb76f3268c.png",
     "index.html": "/jorge-portfolio/index.html",
-    "main.5c3e3c52.css.map": "/jorge-portfolio/static/css/main.5c3e3c52.css.map",
+    "main.17cdf5fe.css.map": "/jorge-portfolio/static/css/main.17cdf5fe.css.map",
     "main.a4543d63.js.map": "/jorge-portfolio/static/js/main.a4543d63.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c3e3c52.css",
+    "static/css/main.17cdf5fe.css",
     "static/js/main.a4543d63.js"
   ]
 }
