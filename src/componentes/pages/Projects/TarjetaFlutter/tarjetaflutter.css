@@ -48,7 +48,7 @@
     content: '';
     position: absolute;
     inset: 2px;
-    background-image: url('./flutter.jpg');
+    background-image: url('./flutter-2.jpg');
     background-size: cover;
     border-radius: 20px;
     overflow: hidden;
