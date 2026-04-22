@@ -5,53 +5,75 @@
   align-items: center;
   justify-content: center;
   padding: 100px 20px 40px;
-  background: 
-    radial-gradient(circle at 50% 50%, #1a1a3e 0%, #0a0a0a 70%),
-    radial-gradient(circle at 30% 20%, rgba(0, 95, 196, 0.15) 0%, transparent 40%),
-    radial-gradient(circle at 70% 80%, rgba(89, 0, 255, 0.15) 0%, transparent 40%);
-  position: relative;
-  overflow: hidden;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .radialWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 1200px;
 }
 
 .radialDeck {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  transform-style: preserve-3d;
+  gap: 30px;
 }
 
 .card {
-  position: absolute;
-  width: 350px;
+  width: 280px;
   cursor: pointer;
-  transform-style: preserve-3d;
+  background: transparent;
   overflow: hidden;
-  border-radius: 26px;
-}
-
-.cardHover {
-  border: 3px solid #fff;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .cardImageWrapper {
   width: 100%;
-  height: 100%;
+  height: auto;
   overflow: hidden;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .cardImage {
   width: 100%;
   height: auto;
+  object-fit: cover;
   display: block;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cardImageWrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: transparent;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.cardImageWrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #252525;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .modal {
@@ -65,67 +87,54 @@
   align-items: center;
   z-index: 1000;
   background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(15px);
   padding: 20px;
 }
 
 .modalContent {
   width: 100%;
-  max-width: 550px;
+  max-width: 480px;
   max-height: 90vh;
-  background: linear-gradient(145deg, #1a1a2e 0%, #0f0f1a 100%);
-  border-radius: 20px;
+  background: #0d0d0d;
   overflow: hidden;
-  position: relative;
 }
 
 .closeButton {
   position: absolute;
   top: 12px;
   right: 12px;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+  width: 32px;
+  height: 32px;
   border: none;
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
-  font-size: 22px;
+  font-size: 20px;
   cursor: pointer;
   z-index: 10;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.closeButton:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: rotate(90deg);
 }
 
 .modalImage {
   width: 100%;
-  height: 280px;
+  height: 220px;
   background-size: cover;
   background-position: center;
+  background-color: #1a1a1a;
 }
 
 .modalInfo {
-  padding: 24px;
+  padding: 20px;
+  background: #0d0d0d;
 }
 
 .modalInfo h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.3rem;
+  font-weight: 600;
   color: #fff;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .description {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  color: #999;
   line-height: 1.6;
   margin-bottom: 16px;
 }
@@ -138,13 +147,10 @@
 }
 
 .techBadge {
-  padding: 6px 14px;
-  background: rgba(0, 95, 196, 0.2);
-  border: 1px solid rgba(0, 95, 196, 0.3);
-  border-radius: 16px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.8rem;
-  color: #fff;
+  padding: 4px 10px;
+  background: #1a1a1a;
+  font-size: 0.75rem;
+  color: #ccc;
 }
 
 .links {
@@ -154,78 +160,60 @@
 
 .githubLink,
 .demoLink {
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
+  padding: 10px 18px;
+  font-size: 0.8rem;
+  font-weight: 500;
   text-decoration: none;
-  transition: all 0.3s ease;
 }
 
 .githubLink {
   background: #fff;
-  color: #0a0a0a;
+  color: #0d0d0d;
 }
 
 .githubLink:hover {
   background: #e0e0e0;
-  transform: translateY(-2px);
 }
 
 .demoLink {
   background: transparent;
-  border: 2px solid #005fc4;
-  color: #005fc4;
+  border: 1px solid #555;
+  color: #fff;
 }
 
 .demoLink:hover {
-  background: #005fc4;
-  color: #fff;
-  transform: translateY(-2px);
+  border-color: #fff;
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 80px 15px 30px;
+    padding: 90px 15px 30px;
   }
 
   .radialDeck {
-    transform: scale(0.6);
+    flex-direction: column;
+    gap: 24px;
   }
 
-  .card {
-    width: 350px;
-  }
+.card {
+  width: 280px;
+  cursor: pointer;
+  background: #0d0d0d;
+  overflow: hidden;
+}
+
+.cardImageWrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #0d0d0d;
+}
 
   .modalContent {
     max-width: 100%;
   }
 
-  .modalImage {
-    height: 180px;
-  }
-
-  .modalInfo {
-    padding: 18px;
-  }
-
-  .modalInfo h2 {
-    font-size: 1.3rem;
-  }
-
   .links {
     flex-direction: column;
-  }
-
-  .githubLink,
-  .demoLink {
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .radialDeck {
-    transform: scale(0.4);
   }
 }

@@ -7,67 +7,37 @@ import { projects } from './projectsData';
 
 export default function CardDeck() {
   const [selectedId, setSelectedId] = useState<number | null>(null);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const handleCardClick = (id: number) => {
     setSelectedId(selectedId === id ? null : id);
   };
 
   const selectedProject = projects.find((p) => p.id === selectedId);
-  const centerIndex = (projects.length - 1) / 2;
 
   return (
     <div className={styles.container}>
       <div className={styles.radialWrapper}>
         <div className={styles.radialDeck}>
-          {projects.map((project, index) => {
-            const isHovered = hoveredIndex === index;
-            const isSelected = selectedId === project.id;
-            const angleOffset = index - centerIndex;
-            
-            return (
-              <motion.div
-                key={project.id}
-                className={`${styles.card} ${isHovered ? styles.cardHover : ''}`}
-                onClick={() => handleCardClick(project.id)}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                animate={{
-                  x: isSelected 
-                    ? 0 
-                    : isHovered 
-                      ? angleOffset * -200 
-                      : angleOffset * -120,
-                  y: isSelected 
-                    ? -80 
-                    : isHovered 
-                      ? -50 
-                      : 0,
-                  rotate: isSelected 
-                    ? 0 
-                    : isHovered 
-                      ? angleOffset * -8 
-                      : angleOffset * -5,
-                  scale: isSelected ? 1.25 : isHovered ? 1.15 : 1,
-                  zIndex: isSelected ? 100 : isHovered ? 90 : 50 + (projects.length - Math.abs(angleOffset)),
-                  opacity: selectedId !== null && !isSelected ? 0.3 : 1,
-                }}
-                transition={{
-                  type: 'spring',
-                  stiffness: 180,
-                  damping: 18,
-                }}
-              >
-                <div className={styles.cardImageWrapper}>
+          {projects.map((project) => (
+            <motion.div
+              key={project.id}
+              className={styles.card}
+              onClick={() => handleCardClick(project.id)}
+              whileHover={{ y: -8 }}
+              style={{ background: 'transparent', padding: 0, margin: 0 }}
+            >
+              <div className={styles.cardImageWrapper} style={{ background: 'transparent' }}>
+                {project.image && (
                   <img 
                     src={project.image}
                     alt={project.title}
                     className={styles.cardImage}
+                    style={{ display: 'block', border: 'none', margin: 0, padding: 0 }}
                   />
-                </div>
-              </motion.div>
-            );
-          })}
+                )}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
 
@@ -82,9 +52,9 @@ export default function CardDeck() {
           >
             <motion.div 
               className={styles.modalContent}
-              initial={{ scale: 0.8, y: 30 }}
-              animate={{ scale: 1, y: 0 }}
-              exit={{ scale: 0.8, y: 30 }}
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
               onClick={(e) => e.stopPropagation()}
             >
               <button 
@@ -95,7 +65,7 @@ export default function CardDeck() {
               </button>
               <div 
                 className={styles.modalImage}
-                style={{ backgroundImage: `url(${selectedProject.modalImage || selectedProject.image})` }}
+                style={{ backgroundImage: selectedProject.modalImage ? `url(${selectedProject.modalImage})` : 'none' }}
               />
               <div className={styles.modalInfo}>
                 <h2>{selectedProject.title}</h2>
@@ -106,14 +76,16 @@ export default function CardDeck() {
                   ))}
                 </div>
                 <div className={styles.links}>
-                  <a 
-                    href={selectedProject.github} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className={styles.githubLink}
-                  >
-                    GitHub
-                  </a>
+                  {selectedProject.github && (
+                    <a 
+                      href={selectedProject.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className={styles.githubLink}
+                    >
+                      GitHub
+                    </a>
+                  )}
                   {selectedProject.demo && (
                     <a 
                       href={selectedProject.demo} 
@@ -121,7 +93,7 @@ export default function CardDeck() {
                       rel="noopener noreferrer"
                       className={styles.demoLink}
                     >
-                      Live Demo
+                      Demo
                     </a>
                   )}
                 </div>

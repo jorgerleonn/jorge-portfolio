@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { StarsBackground } from '@/components/StarsBackground';
 import Navbar from '@/components/Navbar';
 import CardDeck from '@/components/projects/CardDeck';
 
@@ -11,6 +12,7 @@ export default function Projects() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Navbar />
+      <StarsBackground className="fixed inset-0" />
       <CardDeck />
     </>
   );
