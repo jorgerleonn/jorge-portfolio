@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { StarsBackground } from '@/components/StarsBackground';
 import Navbar from '@/components/Navbar';
 import styles from '@/styles/About.module.css';
 
@@ -11,6 +12,7 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Navbar />
+      <StarsBackground className="fixed inset-0" />
       <section className={styles.aboutSection}>
         <div className={styles.texto}>
           <h1>About Me</h1>

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { StarsBackground } from '@/components/StarsBackground';
 import Navbar from '@/components/Navbar';
 import styles from '@/styles/Contact.module.css';
 
@@ -26,6 +27,7 @@ export default function Contact() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Navbar />
+      <StarsBackground className="fixed inset-0" />
       <section className={styles.contactSection}>
         <div className={styles.container}>
           <h1 className={styles.title}>Get In Touch</h1>

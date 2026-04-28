@@ -1,26 +1,27 @@
 import Head from 'next/head';
+import { StarsBackground } from '@/components/StarsBackground';
 import Navbar from '@/components/Navbar';
 import styles from '@/styles/Skills.module.css';
 
-export default function Skills() {
-  const skillCategories = [
-    {
-      title: 'Frontend',
-      icon: '🎨',
-      skills: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Framer Motion']
-    },
-    {
-      title: 'Backend',
-      icon: '⚙️',
-      skills: ['Node.js', 'Python', 'Express', 'REST APIs', 'SQL', 'PostgreSQL']
-    },
-    {
-      title: 'Tools & DevOps',
-      icon: '🛠️',
-      skills: ['Git', 'GitHub', 'Docker', 'VS Code', 'Figma', 'Linux', 'npm']
-    }
-  ];
+const skillCategories = [
+  {
+    title: 'Frontend',
+    icon: '🎨',
+    skills: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Framer Motion']
+  },
+  {
+    title: 'Backend',
+    icon: '⚙️',
+    skills: ['Node.js', 'Python', 'Express', 'REST APIs', 'SQL', 'PostgreSQL']
+  },
+  {
+    title: 'Tools & DevOps',
+    icon: '🛠️',
+    skills: ['Git', 'GitHub', 'Docker', 'VS Code', 'Figma', 'Linux', 'npm']
+  }
+];
 
+export default function Skills() {
   return (
     <>
       <Head>
@@ -29,6 +30,7 @@ export default function Skills() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Navbar />
+      <StarsBackground className="fixed inset-0" />
       <section className={styles.skillsSection}>
         <div className={styles.container}>
           <h1 className={styles.title}>Technical Skills</h1>
