@@ -27,7 +27,7 @@ export function StarsBackground({
     size: Math.random() * 2 + 0.5,
     x: Math.random() * 100,
     delay: 0,
-    duration: Math.random() * 3 + 5,
+    duration: Math.random() * 10 + 15,
   })));
 
   return (
