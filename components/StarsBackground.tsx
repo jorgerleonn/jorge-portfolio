@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 interface StarsBackgroundProps {
   className?: string;
@@ -20,13 +20,11 @@ export function StarsBackground({
     id: number;
     size: number;
     x: number;
-    y: number;
     duration: number;
-  }>>(() => Array.from({ length: 100 }, (_, i) => ({
+  }>>(() => Array.from({ length: 120 }, (_, i) => ({
     id: i,
     size: Math.random() * 2 + 0.5,
     x: Math.random() * 100,
-    y: Math.random() * 110 - 10,
     duration: Math.random() * 10 + 15,
   })));
 
@@ -58,7 +56,7 @@ export function StarsBackground({
         <motion.div
           key={star.id}
           initial={{ 
-            top: `${star.y}%`,
+            top: '110%',
             left: `${star.x}%`,
             opacity: 0,
           }}
