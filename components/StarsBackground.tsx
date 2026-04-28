@@ -16,24 +16,19 @@ export function StarsBackground({
   starColor = '#fff',
   speed = 50,
 }: StarsBackgroundProps) {
-  const [stars, setStars] = useState<Array<{
+  const [stars] = useState<Array<{
     id: number;
     size: number;
     x: number;
     delay: number;
     duration: number;
-  }>>([]);
-
-  useEffect(() => {
-    const newStars = Array.from({ length: 80 }, (_, i) => ({
-      id: i,
-      size: Math.random() * 2 + 0.5,
-      x: Math.random() * 100,
-      delay: Math.random() * 2,
-      duration: Math.random() * 3 + 5,
-    }));
-    setStars(newStars);
-  }, []);
+  }>>(() => Array.from({ length: 80 }, (_, i) => ({
+    id: i,
+    size: Math.random() * 2 + 0.5,
+    x: Math.random() * 100,
+    delay: 0,
+    duration: Math.random() * 3 + 5,
+  })));
 
   return (
     <div
