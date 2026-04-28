@@ -27,7 +27,6 @@ self.__BUILD_MANIFEST = {
     "/_app",
     "/_error",
     "/about",
-    "/api/hello",
     "/contact",
     "/projects",
     "/skills"
