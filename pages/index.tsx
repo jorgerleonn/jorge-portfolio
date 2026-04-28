@@ -19,7 +19,7 @@ export default function Home() {
         <title>Jorge Rguez. León</title>
         <meta name="description" content="Jorge Rodríguez León - Aerospace Engineering student" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/jorge-portfolio/favicon.ico" />
       </Head>
       <Navbar />
       <section className={styles.homeSection}>

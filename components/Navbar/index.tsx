@@ -26,7 +26,7 @@ export default function Navbar() {
     <nav className={`${styles.navbar} ${isSolid ? styles.solid : ''}`}>
       <div className={styles.containerLogo}>
         <Link href="/">
-          <img className={styles.logo} src="/cohete.png" alt="Logo" />
+          <img className={styles.logo} src="/jorge-portfolio/cohete.png" alt="Logo" />
         </Link>
         <span className={styles.span}>Aerospace Engineering student</span>
       </div>
