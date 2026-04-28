@@ -20,13 +20,13 @@ export function StarsBackground({
     id: number;
     size: number;
     x: number;
-    delay: number;
+    y: number;
     duration: number;
   }>>(() => Array.from({ length: 80 }, (_, i) => ({
     id: i,
     size: Math.random() * 2 + 0.5,
     x: Math.random() * 100,
-    delay: Math.random() * 5,
+    y: Math.random() * 100,
     duration: Math.random() * 10 + 15,
   })));
 
@@ -58,7 +58,7 @@ export function StarsBackground({
         <motion.div
           key={star.id}
           initial={{ 
-            top: '110%',
+            top: `${star.y}%`,
             left: `${star.x}%`,
             opacity: 0,
           }}
@@ -69,7 +69,6 @@ export function StarsBackground({
           transition={{
             duration: star.duration,
             repeat: Infinity,
-            delay: star.delay,
             ease: 'linear',
           }}
           style={{
