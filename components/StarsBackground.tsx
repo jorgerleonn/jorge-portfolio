@@ -20,12 +20,14 @@ export function StarsBackground({
     id: number;
     size: number;
     x: number;
+    delay: number;
     duration: number;
   }>>(() => Array.from({ length: 120 }, (_, i) => ({
     id: i,
     size: Math.random() * 2 + 0.5,
     x: Math.random() * 100,
-    duration: Math.random() * 10 + 15,
+    delay: Math.random() * 30, // Random delay up to 30s
+    duration: Math.random() * 10 + 15, // Random duration between 15-25s
   })));
 
   return (
@@ -67,6 +69,7 @@ export function StarsBackground({
           transition={{
             duration: star.duration,
             repeat: Infinity,
+            delay: star.delay,
             ease: 'linear',
           }}
           style={{
