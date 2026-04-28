@@ -22,11 +22,11 @@ export function StarsBackground({
     x: number;
     y: number;
     duration: number;
-  }>>(() => Array.from({ length: 80 }, (_, i) => ({
+  }>>(() => Array.from({ length: 100 }, (_, i) => ({
     id: i,
     size: Math.random() * 2 + 0.5,
     x: Math.random() * 100,
-    y: Math.random() * 100,
+    y: Math.random() * 110 - 10,
     duration: Math.random() * 10 + 15,
   })));
 
