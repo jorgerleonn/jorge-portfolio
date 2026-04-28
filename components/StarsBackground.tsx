@@ -60,7 +60,7 @@ export function StarsBackground({
         <motion.div
           key={star.id}
           animate={{
-            opacity: [star.opacity, star.opacity * 0.3, star.opacity],
+            opacity: [star.opacity, 0.1, star.opacity, 0.2, star.opacity],
           }}
           transition={{
             duration: star.duration,
