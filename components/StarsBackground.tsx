@@ -29,8 +29,8 @@ export function StarsBackground({
       id: i,
       size: Math.random() * 2 + 0.5,
       x: Math.random() * 100,
-      delay: Math.random() * 15,
-      duration: Math.random() * 10 + 15,
+      delay: Math.random() * 2,
+      duration: Math.random() * 3 + 5,
     }));
     setStars(newStars);
   }, []);
