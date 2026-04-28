@@ -59,10 +59,13 @@ export default function About() {
               <p className={styles.email}>j.martin@uptowork.com</p>
               
               <p className={styles.bio}>
-                Graphic Designer with over 10 years of experience specialized in managing IT Departments 
-                for international logistics companies. I can implement effective IT strategies at both 
-                local and global levels. My greatest strength is business acumen, which allows me to 
-                permanently streamline infrastructure and applications.
+                I am an Aerospace Engineering student passionate about designing, analyzing, and optimizing complex systems. My vocation centers on transforming theoretical concepts into tangible, efficient solutions, driven by the challenge of solving high-stakes technical problems.
+              </p>
+              <p className={styles.bio}>
+                I firmly believe in developing projects that are not only functional but also safe, innovative, and rigorously engineered. Whether calculating structural loads, optimizing aerodynamics, or programming control systems, I approach every challenge with curiosity and dedication. As a testament to my proactivity, I am currently independently developing a Class C4 UAV, a project that allows me to integrate my multidisciplinary expertise.
+              </p>
+              <p className={styles.bio}>
+                I am always eager to learn new technologies, refine my engineering and computational tools, and collaborate on projects that drive real impact in the aerospace sector.
               </p>
               
               <div className={styles.contactAddress}>
