@@ -6,16 +6,16 @@ self.__BUILD_MANIFEST = {
     "static/chunks/0_lvtexeqt4bg.js"
   ],
   "/about": [
-    "static/chunks/0_2b9g8bx.fmb.js"
+    "static/chunks/0bxijo6~xvke3.js"
   ],
   "/contact": [
-    "static/chunks/0y8202ugvykx1.js"
+    "static/chunks/0ri81g~.fh~ah.js"
   ],
   "/projects": [
-    "static/chunks/00.l5aqlwz27-.js"
+    "static/chunks/0q5s-8l0guyk3.js"
   ],
   "/skills": [
-    "static/chunks/05zjqly0p9d80.js"
+    "static/chunks/0b_7k5geoemb2.js"
   ],
   "__rewrites": {
     "afterFiles": [],
