@@ -2,48 +2,53 @@ interface Project {
   id: number;
   title: string;
   description: string;
-  image: string;
-  modalImage?: string;
   techStack: string[];
   github: string;
-  demo?: string;
+  page?: string;
+  category: 'software' | 'aeroespacial';
 }
 
 export const projects: Project[] = [
   {
     id: 1,
     title: 'Flutter App',
-    description: 'A mobile application built with Flutter for iOS and Android. Features modern UI and smooth animations.',
-    image: '/jorge-portfolio/images/Flutter tarjeta.png',
-    modalImage: '/jorge-portfolio/images/Flutter tarjeta.png',
+    description: 'Aplicación móvil desarrollada con Flutter para iOS y Android. Interfaz moderna y animaciones fluidas.',
     techStack: ['Flutter', 'Dart', 'Firebase'],
     github: 'https://github.com/jorgerleonn/Flutter',
+    category: 'software',
   },
   {
     id: 2,
-    title: 'Python Projects',
-    description: 'Various Python projects including automation scripts, data analysis, and machine learning examples.',
-    image: '/jorge-portfolio/images/Python tarjeta.png',
-    modalImage: '/jorge-portfolio/images/Python tarjeta.png',
+    title: 'Proyectos Python',
+    description: 'Scripts de automatización, análisis de datos y ejemplos de machine learning desarrollados en Python.',
     techStack: ['Python', 'Pandas', 'Scikit-learn'],
     github: 'https://github.com/jorgerleonn/Python',
+    category: 'software',
   },
   {
     id: 3,
-    title: 'Next.js Portfolio',
-    description: 'A modern portfolio website built with Next.js, TypeScript and Framer Motion. Fully responsive design with smooth animations.',
-    image: '/jorge-portfolio/images/Next js tarjeta.png',
-    modalImage: '/jorge-portfolio/images/Next js tarjeta.png',
+    title: 'Portfolio Next.js',
+    description: 'Portfolio web moderno construido con Next.js, TypeScript y Framer Motion. Diseño responsive con identidad visual propia.',
     techStack: ['Next.js', 'TypeScript', 'Framer Motion'],
     github: 'https://github.com/jorgerleonn/jorge-portfolio',
+    category: 'software',
   },
   {
     id: 4,
     title: 'BRAINX UAV',
-    description: 'Design and development of an autonomous UAV for aerial surveillance and monitoring missions. Featuring advanced flight control systems and real-time data transmission.',
-    image: '/jorge-portfolio/images/UAV design project.png',
-    modalImage: '/jorge-portfolio/images/UAV design project.png',
-    techStack: ['Aerodynamics', 'Flight Control', 'PID', 'Embedded Systems'],
+    description: 'UAV autónomo de ala fija — Clase C4. Perfil NACA 23012, 2.2 m de envergadura, sistema de control de vuelo propio. Diseño y desarrollo independiente desde cero.',
+    techStack: ['Aerodinámica', 'Control de Vuelo', 'PID', 'Sistemas Embebidos'],
     github: '',
+    page: '/projects/uav',
+    category: 'aeroespacial',
+  },
+  {
+    id: 5,
+    title: 'FavSupply',
+    description: 'Plataforma web de suministros y recursos. Desarrollo completo del frontend y la experiencia de usuario con diseño moderno y funcional.',
+    techStack: ['React', 'TypeScript', 'CSS3'],
+    github: '',
+    page: 'https://favsupply.com/',
+    category: 'software',
   },
 ];

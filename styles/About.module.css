@@ -1,48 +1,112 @@
-.aboutSection {
+.section {
   width: 100%;
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  padding-top: 80px;
+  justify-content: center;
+  padding: 120px 32px 80px;
   position: relative;
 }
 
-.contentWrapper {
-  max-width: 45%;
-  padding: 2rem 0 2rem 4rem;
-  text-align: left;
+.content {
+  max-width: 720px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--hud-teal);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
 .title {
-  font-size: 3rem;
-  margin-bottom: 2rem;
-  color: #fff;
-  text-align: left;
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 600;
+  color: var(--data);
+  margin-bottom: 12px;
 }
 
-.textContainer {
-  text-align: left;
+.divider {
+  width: 40px;
+  height: 1px;
+  background: var(--hud-teal);
+  margin-bottom: 40px;
+  opacity: 0.4;
 }
 
-.bio {
-  color: #e0e0e0;
-  font-size: 1.1rem;
+.bio p {
+  font-family: var(--font-body);
+  font-size: 16px;
   line-height: 1.8;
-  margin-bottom: 1.5rem;
-  text-align: left;
+  color: var(--label);
+  margin-bottom: 24px;
 }
 
-@media (max-width: 768px) {
-  .contentWrapper {
-    max-width: 100%;
-    padding: 2rem;
+.linksRow {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.ctaLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--panel-dark);
+  background: var(--hud-teal);
+  padding: 12px 24px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.ctaLink:hover {
+  background: #00e6b8;
+}
+
+.ctaArrow {
+  font-size: 11px;
+  width: 11px;
+}
+
+.ctaLinkSecondary {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--label);
+  text-decoration: none;
+  padding: 12px 24px;
+  border: 1px solid var(--border-subtle);
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.ctaLinkSecondary:hover {
+  border-color: var(--hud-teal);
+  color: var(--data);
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 100px 20px 60px;
   }
-  
-  .title {
-    font-size: 2rem;
+
+  .linksRow {
+    flex-direction: column;
+    align-items: stretch;
   }
-  
-  .bio {
-    font-size: 1rem;
+
+  .ctaLink,
+  .ctaLinkSecondary {
+    text-align: center;
+    justify-content: center;
   }
 }

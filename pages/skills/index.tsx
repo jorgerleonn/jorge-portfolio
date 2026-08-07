@@ -1,52 +1,50 @@
 import Head from 'next/head';
-import { StarsBackground } from '@/components/StarsBackground';
+import GridBackground from '@/components/GridBackground';
 import Navbar from '@/components/Navbar';
 import styles from '@/styles/Skills.module.css';
 
 const skillCategories = [
   {
     title: 'Frontend',
-    icon: '🎨',
-    skills: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Framer Motion']
+    skills: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Framer Motion'],
   },
   {
     title: 'Backend',
-    icon: '⚙️',
-    skills: ['Node.js', 'Python', 'Express', 'REST APIs', 'SQL', 'PostgreSQL']
+    skills: ['Node.js', 'Python', 'Express', 'REST APIs', 'SQL', 'PostgreSQL'],
   },
   {
-    title: 'Tools & DevOps',
-    icon: '🛠️',
-    skills: ['Git', 'GitHub', 'Docker', 'VS Code', 'Figma', 'Linux', 'npm']
-  }
+    title: 'Herramientas & DevOps',
+    skills: ['Git', 'GitHub', 'Docker', 'VS Code', 'Figma', 'Linux', 'npm'],
+  },
 ];
 
 export default function Skills() {
   return (
     <>
       <Head>
-        <title>Skills - Jorge Rguez. León</title>
-        <meta name="description" content="Skills and technologies" />
+        <title>Habilidades — Jorge Rguez. León</title>
+        <meta name="description" content="Habilidades técnicas y tecnologías" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Navbar />
-      <StarsBackground className="fixed inset-0" />
-      <section className={styles.skillsSection}>
-        <div className={styles.container}>
-          <h1 className={styles.title}>Technical Skills</h1>
-          <p className={styles.subtitle}>Technologies I work with</p>
+      <GridBackground style={{ position: 'fixed' }} />
+      <section className={styles.section}>
+        <div className={styles.content}>
+          <p className={styles.tagline}>Competencias</p>
+          <h1 className={styles.title}>Habilidades Técnicas</h1>
+          <div className={styles.divider} />
           <div className={styles.grid}>
             {skillCategories.map((category, index) => (
               <div key={index} className={styles.card}>
                 <div className={styles.cardHeader}>
-                  <span className={styles.cardIcon}>{category.icon}</span>
+                  <span className={styles.cardIndex}>
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
                   <h2 className={styles.cardTitle}>{category.title}</h2>
                 </div>
-                <div className={styles.skillsList}>
-                  {category.skills.map((skill, skillIndex) => (
-                    <span key={skillIndex} className={styles.skillTag}>
-                      {skill}
-                    </span>
+                <div className={styles.tags}>
+                  {category.skills.map((skill) => (
+                    <span key={skill} className={styles.tag}>{skill}</span>
                   ))}
                 </div>
               </div>

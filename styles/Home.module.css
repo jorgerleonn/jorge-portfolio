@@ -1,103 +1,174 @@
-.homeSection {
-  background: url('/jorge-portfolio/escritorio.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: fixed;
+.heroSection {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  margin: 0;
-  padding: 0;
+  justify-content: center;
+  position: relative;
+  padding-top: 64px;
 }
 
-.texto {
-  text-align: left;
-  margin-left: 10vw;
-  line-height: 1.3;
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 64px;
+  position: relative;
+  z-index: 1;
+}
+
+.textBlock {
+  flex-shrink: 0;
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--hud-teal);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
 .nombre {
-  font-size: clamp(20px, 3vw, 30px);
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 40px);
   font-weight: 300;
+  color: var(--data);
   margin: 0;
+  line-height: 1.2;
 }
 
 .leon {
+  font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(45px, 8vw, 90px);
+  font-size: clamp(56px, 9vw, 100px);
+  color: var(--data);
   margin: 0;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.divider {
+  width: 60px;
+  height: 1px;
+  background: var(--hud-teal);
+  margin: 24px 0;
+  opacity: 0.5;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--label);
+  line-height: 1.6;
+  max-width: 400px;
+  margin-bottom: 28px;
 }
 
 .buttons {
   display: flex;
-  gap: 20px;
-  margin-top: 10px;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.btnHome {
-  width: fit-content;
-  height: 25px;
-  border: none;
-  outline: none;
-  color: #fff;
-  background: #111;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
-  margin-bottom: 10px;
+.btnPrimary {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: var(--hud-teal);
+  border: 1px solid var(--hud-teal);
+  color: var(--panel-dark);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s;
+  letter-spacing: 0.02em;
 }
 
-.btnHome::before {
-  content: '';
-  background: linear-gradient(45deg, #000000, #006eff, #5900ff, #000000);
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(4px);
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
-  animation: glowing 20s linear infinite;
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
+.btnPrimary:hover {
+  background: #00e6b8;
 }
 
-.btnHome::after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #111;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
+.btnArrow {
+  font-size: 12px;
+  width: 12px;
 }
 
-@keyframes glowing {
-  0% { background-position: 0 0; }
-  50% { background-position: 400% 0; }
-  100% { background-position: 0 0; }
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--data);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.3s, background 0.3s;
+  letter-spacing: 0.02em;
 }
 
-.iconGithub, .iconLinkedin {
-  width: 15px;
-  height: 15px;
+.btn:hover {
+  border-color: var(--hud-teal);
+  background: var(--surface-hover);
 }
 
-@media screen and (max-width: 600px) {
-  .btnHome {
-    background-color: aqua;
-    margin-right: 10px;
-    width: 60px;
+.btnIcon {
+  font-size: 16px;
+  width: 16px;
+  color: var(--hud-teal);
+}
+
+.cpCurve {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+  .heroContent {
+    flex-direction: column;
+    gap: 48px;
+    padding: 0 24px;
+  }
+
+  .cpCurve {
+    min-width: unset;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroSection {
+    padding-top: 72px;
+  }
+
+  .tagline {
+    font-size: 11px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .btnPrimary,
+  .btn {
+    width: 100%;
+    justify-content: center;
   }
 }

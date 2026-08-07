@@ -1,0 +1,268 @@
+.section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 160px 32px 80px;
+  position: relative;
+}
+
+.content {
+  max-width: 860px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--label);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+  transition: color 0.3s;
+}
+
+.backLink:hover {
+  color: var(--hud-teal);
+}
+
+.backArrow {
+  font-size: 11px;
+  width: 11px;
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--hud-teal);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 6vw, 52px);
+  font-weight: 700;
+  color: var(--data);
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--label);
+  margin-bottom: 20px;
+}
+
+.divider {
+  width: 60px;
+  height: 1px;
+  background: var(--hud-teal);
+  margin-bottom: 36px;
+  opacity: 0.5;
+}
+
+.description p {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--label);
+  margin-bottom: 20px;
+}
+
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 40px 0;
+}
+
+.photoWrap {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  transition: border-color 0.3s;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.photoWrap:hover {
+  border-color: var(--border-active);
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.specsSection,
+.techSection {
+  margin-top: 40px;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--data);
+  margin-bottom: 20px;
+}
+
+.specsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+}
+
+.specCard {
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.specValue {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--hud-teal);
+}
+
+.specLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--label);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.techTag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--hud-teal);
+  background: var(--hud-teal-dim);
+  padding: 8px 14px;
+  border: 1px solid rgba(0, 212, 170, 0.12);
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  background: rgba(11, 18, 25, 0.95);
+  backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lightboxClose {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--data);
+  font-size: 18px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: border-color 0.3s;
+}
+
+.lightboxClose:hover {
+  border-color: var(--hud-teal);
+}
+
+.lightboxNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--data);
+  font-size: 22px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: border-color 0.3s;
+}
+
+.lightboxNav:hover {
+  border-color: var(--hud-teal);
+}
+
+.lightboxPrev {
+  left: 20px;
+}
+
+.lightboxNext {
+  right: 20px;
+}
+
+.lightboxImage {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  cursor: default;
+}
+
+.lightboxCounter {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--label);
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  padding: 6px 16px;
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 140px 20px 60px;
+  }
+
+  .photoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .specsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
