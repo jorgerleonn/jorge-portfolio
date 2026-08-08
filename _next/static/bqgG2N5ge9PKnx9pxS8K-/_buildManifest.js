@@ -15,10 +15,10 @@ self.__BUILD_MANIFEST = {
     "static/chunks/16nj.0cg9dzki.js"
   ],
   "/projects/uav": [
-    "static/chunks/09kux0l7e6cds.js"
+    "static/chunks/0fcrodmnmi9bb.js"
   ],
   "/skills": [
-    "static/chunks/0aoufkeueuvzq.js"
+    "static/chunks/0w0pob7oq5uh0.js"
   ],
   "__rewrites": {
     "afterFiles": [],
