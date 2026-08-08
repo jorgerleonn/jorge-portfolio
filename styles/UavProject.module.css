@@ -64,6 +64,18 @@
   margin-bottom: 20px;
 }
 
+.statusBadge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--hud-amber);
+  border: 1px solid var(--hud-amber);
+  padding: 3px 8px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .divider {
   width: 60px;
   height: 1px;
@@ -235,7 +247,7 @@
 
 .lightboxImage {
   max-width: 90vw;
-  max-height: 85vh;
+  max-height: 80vh;
   object-fit: contain;
   cursor: default;
 }
@@ -253,16 +265,60 @@
   padding: 6px 16px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .section {
     padding: 140px 20px 60px;
   }
 
   .photoGrid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
   }
 
   .specsGrid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .description p {
+    font-size: 14px;
+  }
+
+  .lightboxClose {
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .lightboxNav {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  .lightboxPrev {
+    left: 8px;
+  }
+
+  .lightboxNext {
+    right: 8px;
+  }
+
+  .lightboxImage {
+    max-width: 95vw;
+    max-height: 75vh;
+  }
+
+  .lightboxCounter {
+    bottom: 12px;
+    font-size: 11px;
+    padding: 4px 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .photoGrid {
+    grid-template-columns: 1fr;
   }
 }

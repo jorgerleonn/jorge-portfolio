@@ -166,3 +166,17 @@
     display: flex;
   }
 }
+
+@media (max-width: 360px) {
+  .brandText {
+    display: none;
+  }
+
+  .mobileNavItem {
+    font-size: 20px;
+  }
+
+  .mobileMenu {
+    gap: 28px;
+  }
+}

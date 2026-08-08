@@ -20,7 +20,7 @@ const UAV_PHOTOS = [
 ];
 
 const SPECS = [
-  { label: 'Perfil alar', value: 'NACA 23012' },
+  { label: 'Perfil alar', value: 'Selig 1223' },
   { label: 'Envergadura', value: '2.2 m' },
   { label: 'Vel. pérdida', value: '10 m/s' },
   { label: 'Vel. crucero', value: '12 m/s' },
@@ -75,9 +75,9 @@ export default function UavProject() {
             Todos los proyectos
           </Link>
 
-          <p className={styles.tagline}>Proyecto {String(4).padStart(2, '0')}</p>
+          <p className={styles.tagline}>Proyecto {String(1).padStart(2, '0')}</p>
           <h1 className={styles.title}>BRAINX UAV</h1>
-          <p className={styles.subtitle}>Clase C4 · Ala Fija Autónomo</p>
+          <p className={styles.subtitle}>Clase C4 · Ala Fija Autónomo · <span className={styles.statusBadge}>En desarrollo</span></p>
           <div className={styles.divider} />
 
           <div className={styles.description}>
@@ -88,8 +88,8 @@ export default function UavProject() {
               los sistemas de control de vuelo y la programación embebida.
             </p>
             <p>
-              La aeronave utiliza un perfil alar NACA 23012, seleccionado por sus
-              características favorables de sustentación-resistencia a bajos números
+              La aeronave utiliza un perfil alar Selig 1223, seleccionado por su
+              alto coeficiente de sustentación a bajos números
               de Reynolds. La envergadura de 2.2 metros proporciona la sustentación
               necesaria para un MTOW de 4 kg, manteniendo maniobrabilidad
               a la velocidad de crucero de 12 m/s.

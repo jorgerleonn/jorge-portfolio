@@ -64,7 +64,12 @@ export default function CardDeck() {
                   </span>
 
                   <div className={styles.cardContent}>
-                    <h3 className={styles.cardTitle}>{project.title}</h3>
+                    <h3 className={styles.cardTitle}>
+                      {project.title}
+                      {project.status && (
+                        <span className={styles.statusBadge}>{project.status}</span>
+                      )}
+                    </h3>
                     <p className={styles.cardDesc}>{project.description}</p>
 
                     <div className={styles.cardTech}>

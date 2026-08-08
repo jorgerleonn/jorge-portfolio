@@ -60,7 +60,7 @@
   font-weight: 400;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .inner {
     overflow-x: auto;
     justify-content: flex-start;
@@ -74,8 +74,8 @@
   }
 
   .param {
-    padding: 4px 16px;
-    min-width: 65px;
+    padding: 4px 14px;
+    min-width: 60px;
   }
 
   .label {
@@ -83,10 +83,10 @@
   }
 
   .value {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .unit {
-    font-size: 10px;
+    font-size: 9px;
   }
 }

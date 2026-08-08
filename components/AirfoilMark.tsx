@@ -15,10 +15,10 @@ export default function AirfoilMark({ className = '', size = 32 }: AirfoilMarkPr
     >
       <path
         d="M4 39
-           C4 39, 12 8, 40 8
-           C68 8, 116 25, 116 39
-           C116 53, 68 70, 40 70
-           C12 70, 4 39, 4 39Z"
+           C4 39, 8 10, 32 8
+           C56 6, 80 18, 116 39
+           C116 39, 80 65, 44 68
+           C24 70, 4 39, 4 39Z"
         stroke="#00D4AA"
         strokeWidth="3"
         fill="none"
@@ -26,8 +26,8 @@ export default function AirfoilMark({ className = '', size = 32 }: AirfoilMarkPr
       />
       <path
         d="M4 39
-           C4 39, 12 8, 40 8
-           C68 8, 116 25, 116 39"
+           C4 39, 8 10, 32 8
+           C56 6, 80 18, 116 39"
         stroke="#00D4AA"
         strokeWidth="1.2"
         fill="none"

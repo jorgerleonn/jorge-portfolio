@@ -94,9 +94,13 @@
   color: var(--data);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .section {
     padding: 100px 20px 60px;
+  }
+
+  .bio p {
+    font-size: 14px;
   }
 
   .linksRow {

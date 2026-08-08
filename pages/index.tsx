@@ -1,10 +1,11 @@
 import Head from 'next/head';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import GridBackground from '@/components/GridBackground';
+import ProjectSlider from '@/components/ProjectSlider';
 import styles from '@/styles/Home.module.css';
 
 function CpCurve() {
@@ -14,7 +15,7 @@ function CpCurve() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={styles.cpCurve}
-      aria-label="Distribución del coeficiente de presión — NACA 23012 a 4° de ángulo de ataque"
+      aria-label="Distribución del coeficiente de presión — Selig 1223 a 4° de ángulo de ataque"
       role="img"
     >
       <line x1="40" y1="170" x2="340" y2="170" stroke="var(--grid-line)" strokeWidth="0.5" />
@@ -24,11 +25,11 @@ function CpCurve() {
       <text x="34" y="24" fill="var(--label)" fontSize="9" fontFamily="var(--font-mono)">−Cp</text>
 
       <path
-        d="M40,142 C48,65 60,35 72,42 C84,49 100,60 120,68
-           C140,76 170,82 200,86 C230,90 270,93 310,96 C320,97 330,98 340,99
-           C340,99 330,98 310,99 C270,100 230,100 200,101
-           C170,102 140,104 120,106 C100,108 84,112 72,115
-           C60,118 48,125 40,142Z"
+        d="M40,142 C48,50 56,24 68,28 C80,32 96,45 116,55
+           C136,65 166,74 196,80 C226,86 266,91 306,95 C316,96 326,97 340,98
+           C340,98 326,97 306,98 C266,99 226,100 196,101
+           C166,102 136,104 116,108 C96,112 80,118 68,125
+           C56,132 48,140 40,142Z"
         fill="var(--hud-teal-dim)"
         stroke="var(--hud-teal)"
         strokeWidth="1.5"
@@ -36,8 +37,8 @@ function CpCurve() {
       />
 
       <path
-        d="M40,142 C48,65 60,35 72,42 C84,49 100,60 120,68
-           C140,76 170,82 200,86 C230,90 270,93 310,96 C320,97 330,98 340,99"
+        d="M40,142 C48,50 56,24 68,28 C80,32 96,45 116,55
+           C136,65 166,74 196,80 C226,86 266,91 306,95 C316,96 326,97 340,98"
         fill="none"
         stroke="var(--hud-teal)"
         strokeWidth="1.5"
@@ -45,9 +46,9 @@ function CpCurve() {
       />
 
       <path
-        d="M40,142 C48,125 60,118 72,115 C84,112 100,108 120,106
-           C140,104 170,102 200,101 C230,100 270,100 310,99
-           C320,98 330,98 340,99"
+        d="M40,142 C48,140 56,132 68,125 C80,118 96,112 116,108
+           C136,104 166,102 196,101 C226,100 266,99 306,98
+           C326,97 326,97 340,98"
         fill="none"
         stroke="var(--hud-teal)"
         strokeWidth="0.8"
@@ -55,14 +56,14 @@ function CpCurve() {
         opacity="0.35"
       />
 
-      <circle cx="72" cy="42" r="3" fill="var(--hud-teal)" opacity="0.6" />
-      <text x="72" y="32" fill="var(--hud-teal)" fontSize="9" fontFamily="var(--font-mono)" textAnchor="middle" opacity="0.6">pico de succión</text>
+      <circle cx="68" cy="28" r="3" fill="var(--hud-teal)" opacity="0.6" />
+      <text x="68" y="18" fill="var(--hud-teal)" fontSize="9" fontFamily="var(--font-mono)" textAnchor="middle" opacity="0.6">pico de succión</text>
 
       <text x="340" y="92" fill="var(--label)" fontSize="8" fontFamily="var(--font-mono)" textAnchor="end" opacity="0.5">extradós</text>
       <text x="340" y="110" fill="var(--label)" fontSize="8" fontFamily="var(--font-mono)" textAnchor="end" opacity="0.35">intradós</text>
 
       <text x="40" y="158" fill="var(--label)" fontSize="8" fontFamily="var(--font-mono)" opacity="0.5">
-        NACA 23012 · α = 4°
+        Selig 1223 · α = 4°
       </text>
     </svg>
   );
@@ -97,6 +98,14 @@ export default function Home() {
                 <FontAwesomeIcon icon={faArrowRight} className={styles.btnArrow} />
               </Link>
               <a
+                href="/jorge-portfolio/cv.pdf"
+                download
+                className={styles.btnCv}
+              >
+                <FontAwesomeIcon icon={faFilePdf} className={styles.btnIcon} />
+                Descargar CV
+              </a>
+              <a
                 href="https://github.com/jorgerleonn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -119,6 +128,7 @@ export default function Home() {
           <CpCurve />
         </div>
       </section>
+      <ProjectSlider />
     </>
   );
 }
