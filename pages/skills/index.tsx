@@ -9,7 +9,7 @@ import styles from '@/styles/Skills.module.css';
 const SKILL_SECTIONS = [
   {
     title: 'Ingeniería y Diseño',
-    items: ['Impresión 3D', 'Diseño CAD (SolidWorks)'],
+    items: ['Impresión 3D', 'Diseño CAD (SolidWorks)', 'XFLR5'],
   },
   {
     title: 'Programación y Datos',

@@ -12,9 +12,7 @@ interface TelemetryParams {
 const BASE_PARAMS: TelemetryParams[] = [
   { label: 'ALT', value: '100', unit: 'm' },
   { label: 'SPD', value: '12.0', unit: 'm/s' },
-  { label: 'HDG', value: '274', unit: '°' },
-  { label: 'AOA', value: '4.0', unit: '°' },
-  { label: 'BAT', value: '85', unit: '%' },
+  { label: 'BAT', value: '9500', unit: 'mAh' },
   { label: 'WSPN', value: '2.2', unit: 'm' },
 ];
 
@@ -43,9 +41,7 @@ export default function TelemetryStrip() {
           setParams([
             { label: 'ALT', value: (100 + Math.sin(progress * 8) * 3).toFixed(0), unit: 'm' },
             { label: 'SPD', value: (12.0 + Math.sin(progress * 6) * 0.5).toFixed(1), unit: 'm/s' },
-            { label: 'HDG', value: (270 + Math.sin(progress * 4) * 20).toFixed(0), unit: '°' },
-            { label: 'AOA', value: (4.0 + Math.sin(progress * 5) * 0.8).toFixed(1), unit: '°' },
-            { label: 'BAT', value: (85 - progress * 12).toFixed(0), unit: '%' },
+            { label: 'BAT', value: (9500 - progress * 800).toFixed(0), unit: 'mAh' },
             { label: 'WSPN', value: '2.2', unit: 'm' },
           ]);
           ticking = false;
